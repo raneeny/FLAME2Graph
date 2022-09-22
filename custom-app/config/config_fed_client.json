@@ -1,0 +1,26 @@
+{
+  "format_version": 2,
+  "executors": [
+    {
+      "tasks": [
+        "train"
+      ],
+      "executor": {
+        "path": "custom_traner.SimpleTrainer",
+        "args": {     }
+      }
+    },
+
+  {
+      "tasks": [
+        "validate"
+      ],
+      "executor": {
+        "path": "custom_validator.SimpleValidator",
+        "args": {     }
+      }
+    }
+
+  ],
+  "task_data_filters": []
+}
