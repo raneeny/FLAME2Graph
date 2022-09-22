@@ -2,7 +2,7 @@
 """
 Created on Fri Dec 11 11:43:54 2020
 
-@author: Raneen_new
+@author: 
 """
 
 from matplotlib import pyplot

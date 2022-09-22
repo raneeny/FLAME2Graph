@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 11 11:11:36 2020
 
-@author: raneen_pc
+@author: 
 This class will implement a convnet model and return the weights of the 
 trained parameters for a dataset
 

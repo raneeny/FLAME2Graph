@@ -2,7 +2,7 @@
 """
 Created on Thu Nov 12 14:24:41 2020
 
-@author: raneen_pc
+@author: 
 
 This class will return the highly activated filters(feature map) for each layer in anetwork
 """
