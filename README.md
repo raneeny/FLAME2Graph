@@ -1,1 +1,1 @@
-# FLAME2Graph
+# FLAME2Graph paper code
