@@ -9,19 +9,6 @@ Our extensive experiments on various datasets from well-known multivariate bench
  * The Baydogan’s archive, contains 13 multivariate time series classification datasets. In this work, we choose five datasets from this archive (UWave, ECG, AUSLAN, NetFlow, and Wafer).
  * Human Activity Recognition (HAR) dataset recorded daily activities from 30 volunteers and produced six different labels of these activities (walking, walking upstairs, walking downstairs, standing, sitting, and lying).
  * PAMAP2 Physical Activity Monitoring (PAM) dataset recorded 18 different daily activities using 17 sensors. 
-## Code
-The code is divided as follows:
-
-* The main.py python file contains the necessary code to run an experiement.
-* The FlySmote.py contains the necessary functions to apply fly-smote re-balancing method.
-* the NNModel.py contains the neural network model.
-* The ReadData.py file contains the necessary functions to read the datasets.
-
-To run a model on one dataset you should issue the following command:
-
-```bash
-python main.py -f <dataname> -d <data file name> -k <samples from miniority> -r <ratio of new samples>
-```
 
 ## Prerequisites
 The python packages needed are:
