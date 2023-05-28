@@ -13,6 +13,8 @@ Our extensive experiments on various datasets from well-known multivariate bench
  * PAMAP2 Physical Activity Monitoring (PAM) dataset recorded 18 different daily activities using 17 sensors. 
 
 ## Prerequisites
+In order to simulate federated learning as it occurs in a real-world scenario, we employ NVIDIA !FLARE(https://nvflare.readthedocs.io/en/main/flare_overview.html). We set up a server with four clients for each experiment. 
+
 The python packages needed are:
 * numpy
 * pandas
