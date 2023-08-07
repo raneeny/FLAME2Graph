@@ -1,5 +1,6 @@
 # FLAMES2Graph: An Interpretable Federated Multivariate Time Series Classification Framework
 Raneen Younis, Zahra Ahmadi, Abdul Hakmeh, Marco Fisichella
+
 {younis,ahmadi,mfisichella@l3s.de}
 ![Capture](https://github.com/anonymousger/FLAME2Graph/assets/85762194/33062fbc-5dbe-4b75-8aae-5f22bae06572)
 
