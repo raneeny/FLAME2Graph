@@ -1,6 +1,6 @@
 # FLAMES2Graph: An Interpretable Federated Multivariate Time Series Classification Framework
-
-
+Raneen Younis, Zahra Ahmadi, Abdul Hakmeh, Marco Fisichella
+{younis,ahmadi,mfisichella@l3s.de}
 ![Capture](https://github.com/anonymousger/FLAME2Graph/assets/85762194/33062fbc-5dbe-4b75-8aae-5f22bae06572)
 
 Increasing privacy concerns have led to decentralized and federated machine learning techniques that allow individual clients to consult and train models collaboratively without sharing private information. Some of these applications, such as medical and healthcare, require the final decisions to be interpretable. One common form of data in these applications is multivariate time series, where deep neural networks, especially convolutional neural networks based approaches, have established excellent performance in their classification tasks. However, promising results and performance of deep learning models are a black box, and their decisions cannot always be guaranteed and trusted. While several approaches address the interpretability of deep learning models for multivariate time series data in a centralized environment, less effort has been made in a federated setting. In this work, we introduce FLAMES2Graph, a new horizontal federated learning framework designed to interpret the deep learning decisions of each client. FLAMES2Graph extracts and visualizes those input subsequences that are highly activated by a convolutional neural network. Besides, an evolution graph is created to capture the temporal dependencies between the extracted distinct subsequences. 
