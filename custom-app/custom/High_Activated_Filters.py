@@ -42,42 +42,7 @@ class HighlyActivated:
         activations = activation_model.predict(self.x_test)
         #shows the activated filters for each layer for an example    
         return activations    
-    
-    def predect(self,y_true,x_test,model):
-        y_pred = model.predict(x_test)
-        y_pred = np.argmax(y_pred, axis=1)
-        keras.backend.clear_session()        
-        return y_pred
       
-    def define_threshould(self,activations):
-        threshoulds = [[] for i in range(self.netLayers)]
-        layer_data = [[] for i in range(self.netLayers)]
-        ff = True
-        activated_id = 1
-        filter_index = 0
-        for l in range(1,self.netLayers+9):
-            flag = False
-            #get the id of the filter layer
-            if(l == 3):
-                activated_id = 0
-                filter_index = 0
-                flag = True                    
-            elif(l==6):
-                activated_id = 1
-                filter_index = 1
-                flag = True  
-            elif(l==9):
-                activated_id = 2
-                filter_index = 2
-                flag = True
-            #so make sure that we only have the id of conv layer
-            if(flag):
-                activated_nodes = activations[l]
-                for i in range(0,activated_nodes.shape[2]):
-                    Q3 = np.percentile(activated_nodes[:, :, i], 96)
-                layer_data[filter_index].append(Q3)
-        
-        return layer_data
     
     def mhap_get_par(self,j,threshoulds,activations,kernal_size):
         #loop through each layer in the network
@@ -140,41 +105,6 @@ class HighlyActivated:
                         index_k +=1
         return filter_lists
     
-        
-    def get_index_MHAP(self,activations,kernal_size=[]):
-        #depends on the network archi
-        threshoulds = self.define_threshould(activations)
-        results = []
-        #loop through each training sample
-        print("start MHAP")
-        for j in range(len(self.x_test)):
-            results.append(self.mhap_get_par(j,threshoulds,activations,kernal_size))
-            #print(len(results))
-        #results = Parallel(n_jobs=5,backend="threading")(delayed(self.mhap_get_par)(j,threshoulds,activations,kernal_size) for j in range(len(self.x_test)))
-        print("finish mhap")
-        return results,threshoulds
-    
-    def normilization(self,data):
-        i = 0
-        datt = []
-        maxi = max(data)
-        mini = abs(min(data))
-        while (i< len(data)):
-            if(data[i] >=0):
-                if(maxi == 0):
-                    val = 0
-                else:
-                    val = data[i]/maxi
-            else:
-                if(mini ==0):
-                    val = 0
-                else:
-                    val = data[i]/mini
-         
-            datt.append(val)
-            i += 1
-            
-        return datt
     def fitted_cluster(self,data,cluster):
         data = self.normilization(data)
         #data = normalize(data[:,np.newaxis], axis=0).ravel()
